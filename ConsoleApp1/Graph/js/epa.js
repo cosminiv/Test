@@ -25,7 +25,7 @@ function makeReqPerMinuteChart(epaDataRecords) {
         else
             data[minuteOrder]++;
 
-        labels[minuteOrder] = d.day + ':' + d.hour + ':' + d.minute;
+        labels[minuteOrder] = d.day + ' Aug ' + d.hour + ':' + d.minute;
     }
 
     var ctx = document.getElementById('requestsPerMinuteChart').getContext('2d');

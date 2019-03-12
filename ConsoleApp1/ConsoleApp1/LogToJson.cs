@@ -87,6 +87,8 @@ namespace ConsoleApp1
             else
                 req.url = requestStr.Substring(firstSpaceIndex + 1);
 
+            req.url = req.url.Replace("\"", "");
+
             if (isValidProtocol) {
                 req.protocol = protocolTokens[0];
                 req.protocol_version = protocolTokens[1];
