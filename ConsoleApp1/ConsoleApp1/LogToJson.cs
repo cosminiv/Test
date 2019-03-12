@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -47,7 +48,7 @@ namespace ConsoleApp1
 
             int spaceIndex1 = line.IndexOf(' ');
             int spaceIndex2 = line.IndexOf(' ', spaceIndex1 + 1);
-            int lastQuotesIndex = line.IndexOf('"', spaceIndex2 + 2);
+            int lastQuotesIndex = line.LastIndexOf('"');
             int lastSpaceIndex = line.IndexOf(' ', lastQuotesIndex + 2);
 
             record.host = line.Substring(0, spaceIndex1);
